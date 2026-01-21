@@ -19,6 +19,24 @@
 
 ---
 
+## 🔒 Privacy & Security
+
+**Your code stays 100% private:**
+- ✅ Runs locally on your device (no cloud required)
+- ✅ Only communicates with YOUR authenticated LLM provider (OpenAI, Claude, etc.)
+- ✅ No telemetry, analytics, or tracking
+- ✅ Sandboxed environment - other apps can't access your code
+- ✅ Open source - [audit the code yourself](ARCHITECTURE.md)
+
+**Want to verify?** Run the verification script:
+```bash
+curl -sL https://raw.githubusercontent.com/rajbreno/PocketCode/main/verify_network.sh | bash
+```
+
+📖 Read more: [Architecture & Security](ARCHITECTURE.md) | [Network Verification Guide](NETWORK_VERIFICATION.md) | [Network Flow Diagram](NETWORK_DIAGRAM.md)
+
+---
+
 ## What You Need
 
 - Android phone (6GB+ RAM, 5GB free storage)
@@ -156,3 +174,62 @@ Your backup will be in the **Downloads** folder.
 ---
 
 **Made with ❤️ for mobile developers.**
+
+---
+
+## 🔐 Security & Privacy FAQ
+
+### Where does my code go?
+Your code stays **100% local** on your Android device in Termux's sandboxed filesystem (`/data/data/com.termux/files/home/`). Other apps cannot access it due to Android's security model.
+
+### What network requests are made?
+
+**During Setup:**
+- GitHub - Downloads this setup script
+- Termux/Debian repos - Official package repositories
+- NodeSource - Official Node.js distribution  
+- OpenCode.ai - AI coding agent installer
+
+**During Runtime (when using OpenCode):**
+- **ONLY your authenticated LLM provider** (OpenAI, Anthropic, Google, etc.)
+- Uses YOUR API key
+- No other endpoints contacted
+
+### Is there any telemetry or tracking?
+**NO.** PocketCode:
+- ❌ No analytics
+- ❌ No telemetry
+- ❌ No usage tracking
+- ❌ No "phone home" functionality
+- ✅ Completely open source
+
+### How can I verify this?
+1. **Audit the source:** All code is at https://github.com/rajbreno/PocketCode
+2. **Run verification script:**
+   ```bash
+   curl -sL https://raw.githubusercontent.com/rajbreno/PocketCode/main/verify_network.sh | bash
+   ```
+3. **Monitor network yourself:** See [NETWORK_VERIFICATION.md](NETWORK_VERIFICATION.md) for detailed instructions
+
+### What about OpenCode's privacy?
+OpenCode is a third-party tool. It sends your prompts and code context **only** to your configured LLM provider using your API key. Verify this:
+- Check `~/.opencode/config.json` to see configured endpoint
+- Monitor network traffic during use
+- Use Android firewall apps (NetGuard, PCAPdroid)
+
+### Is my API key safe?
+Yes. Your API key is:
+- Stored locally in OpenCode's config file
+- Used only to authenticate with your LLM provider
+- Never sent anywhere else
+- Never leaves your device except for API calls to your provider
+
+### Documentation
+- 📖 [ARCHITECTURE.md](ARCHITECTURE.md) - Complete architecture and security model
+- 🔍 [NETWORK_VERIFICATION.md](NETWORK_VERIFICATION.md) - Step-by-step verification guide
+- 📊 [NETWORK_DIAGRAM.md](NETWORK_DIAGRAM.md) - Visual network flow diagrams
+- 🛡️ [verify_network.sh](verify_network.sh) - Automated verification script
+
+---
+
+**Questions or concerns?** Open an issue: https://github.com/rajbreno/PocketCode/issues
