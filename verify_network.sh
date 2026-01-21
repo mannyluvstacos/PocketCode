@@ -79,13 +79,13 @@ print_info "Verifying these are expected domains..."
 echo ""
 
 ALL_GOOD=true
-for line in $CURL_COMMANDS; do
+while IFS= read -r line; do
     for domain in "${EXPECTED_DOMAINS[@]}"; do
         if echo "$line" | grep -q "$domain"; then
             print_success "Found expected domain: $domain"
         fi
     done
-done
+done <<< "$CURL_COMMANDS"
 
 # Check for unexpected domains
 SUSPICIOUS_DOMAINS=(
@@ -158,7 +158,7 @@ TELEMETRY_PATTERNS=(
 
 FOUND_TELEMETRY=false
 for pattern in "${TELEMETRY_PATTERNS[@]}"; do
-    if grep -qiF "$pattern" setup.sh 2>/dev/null || grep -qiE "$pattern" setup.sh 2>/dev/null; then
+    if grep -qiE "$pattern" setup.sh 2>/dev/null; then
         print_error "Found potential telemetry pattern: $pattern"
         FOUND_TELEMETRY=true
     fi
