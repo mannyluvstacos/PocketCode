@@ -33,7 +33,7 @@
 curl -sL https://raw.githubusercontent.com/mannyluvstacos/PocketCode/main/verify_network.sh | bash
 ```
 
-📖 Read more: [Architecture & Security](ARCHITECTURE.md) | [Network Verification Guide](NETWORK_VERIFICATION.md)
+📖 Read more: [Architecture & Security](ARCHITECTURE.md) | [Network Verification Guide](NETWORK_VERIFICATION.md) | [Network Flow Diagram](NETWORK_DIAGRAM.md)
 
 ---
 
@@ -227,6 +227,7 @@ Yes. Your API key is:
 ### Documentation
 - 📖 [ARCHITECTURE.md](ARCHITECTURE.md) - Complete architecture and security model
 - 🔍 [NETWORK_VERIFICATION.md](NETWORK_VERIFICATION.md) - Step-by-step verification guide
+- 📊 [NETWORK_DIAGRAM.md](NETWORK_DIAGRAM.md) - Visual network flow diagrams
 - 🛡️ [verify_network.sh](verify_network.sh) - Automated verification script
 
 ---
