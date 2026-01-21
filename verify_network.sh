@@ -47,7 +47,7 @@ echo ""
 # Download setup.sh if not present
 if [ ! -f "setup.sh" ]; then
     print_info "Downloading setup.sh for analysis..."
-    curl -sL https://raw.githubusercontent.com/mannyluvstacos/PocketCode/main/setup.sh -o setup.sh
+    curl -sL https://raw.githubusercontent.com/rajbreno/PocketCode/main/setup.sh -o setup.sh
 fi
 
 # Check for curl/wget commands
@@ -256,5 +256,5 @@ echo "For complete verification documentation, see:"
 echo "  • ARCHITECTURE.md - System architecture and security model"
 echo "  • NETWORK_VERIFICATION.md - Detailed verification methods"
 echo ""
-echo "Report issues at: https://github.com/mannyluvstacos/PocketCode/issues"
+echo "Report issues at: https://github.com/rajbreno/PocketCode/issues"
 echo ""

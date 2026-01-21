@@ -30,7 +30,7 @@
 
 **Want to verify?** Run the verification script:
 ```bash
-curl -sL https://raw.githubusercontent.com/mannyluvstacos/PocketCode/main/verify_network.sh | bash
+curl -sL https://raw.githubusercontent.com/rajbreno/PocketCode/main/verify_network.sh | bash
 ```
 
 📖 Read more: [Architecture & Security](ARCHITECTURE.md) | [Network Verification Guide](NETWORK_VERIFICATION.md) | [Network Flow Diagram](NETWORK_DIAGRAM.md)
@@ -204,10 +204,10 @@ Your code stays **100% local** on your Android device in Termux's sandboxed file
 - ✅ Completely open source
 
 ### How can I verify this?
-1. **Audit the source:** All code is at https://github.com/mannyluvstacos/PocketCode
+1. **Audit the source:** All code is at https://github.com/rajbreno/PocketCode
 2. **Run verification script:**
    ```bash
-   curl -sL https://raw.githubusercontent.com/mannyluvstacos/PocketCode/main/verify_network.sh | bash
+   curl -sL https://raw.githubusercontent.com/rajbreno/PocketCode/main/verify_network.sh | bash
    ```
 3. **Monitor network yourself:** See [NETWORK_VERIFICATION.md](NETWORK_VERIFICATION.md) for detailed instructions
 
@@ -232,4 +232,4 @@ Yes. Your API key is:
 
 ---
 
-**Questions or concerns?** Open an issue: https://github.com/mannyluvstacos/PocketCode/issues
+**Questions or concerns?** Open an issue: https://github.com/rajbreno/PocketCode/issues

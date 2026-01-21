@@ -63,7 +63,7 @@ The entire PocketCode repository is open source. You can audit it yourself:
 
 ```bash
 # Clone the repository
-git clone https://github.com/mannyluvstacos/PocketCode.git
+git clone https://github.com/rajbreno/PocketCode.git
 cd PocketCode
 
 # Search for all network requests in setup.sh
@@ -220,7 +220,7 @@ If you see connections to any of these during runtime, something is wrong:
 
 **What to do if you see unexpected connections:**
 1. Stop using the tool immediately
-2. Report the issue at https://github.com/mannyluvstacos/PocketCode/issues
+2. Report the issue at https://github.com/rajbreno/PocketCode/issues
 3. Run `netstat -tulpn` to identify the process making the connection
 
 ## Verification Checklist
@@ -265,7 +265,7 @@ We provide a verification script you can run:
 
 ```bash
 # Download the verification script
-curl -sL https://raw.githubusercontent.com/mannyluvstacos/PocketCode/main/verify_network.sh | bash
+curl -sL https://raw.githubusercontent.com/rajbreno/PocketCode/main/verify_network.sh | bash
 
 # Or run it manually after cloning the repo
 ./verify_network.sh
@@ -287,7 +287,7 @@ PocketCode is designed with privacy in mind:
 - ✅ You can verify all of this yourself
 
 If you have concerns or questions, please open an issue at:  
-https://github.com/mannyluvstacos/PocketCode/issues
+https://github.com/rajbreno/PocketCode/issues
 
 ## Additional Resources
 

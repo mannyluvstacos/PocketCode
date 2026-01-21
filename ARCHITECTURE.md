@@ -90,7 +90,7 @@ After setup, when you run `opencode` or other AI coding agents:
    - No "phone home" functionality
 
 4. **Open Source**
-   - All code is available at https://github.com/mannyluvstacos/PocketCode
+   - All code is available at https://github.com/rajbreno/PocketCode
    - You can audit the setup.sh script before running it
    - No obfuscated or hidden code
 
